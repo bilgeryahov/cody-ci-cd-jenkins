@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'microsoft/dotnet:sdk' }
+        docker { 
+            image 'microsoft/dotnet:sdk'
+            label 'ubuntu_1804_agent'
+        }
     }
     stages {
         stage('Test') {
