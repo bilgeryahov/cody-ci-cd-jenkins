@@ -11,14 +11,12 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'cd ./tests/'
-                sh 'dotnet test'
+                sh 'cd ./tests/ && dotnet test'
             }
         }
         stage('Build') {
             steps {
-                sh 'cd ../class-library/'
-                sh 'dotnet build'
+                sh 'cd ../class-library/ && dotnet build'
             }
         }
     }
