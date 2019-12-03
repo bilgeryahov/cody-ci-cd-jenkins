@@ -5,6 +5,9 @@ pipeline {
             label 'ubuntu_1804_agent'
         }
     }
+    environment {
+        HOME = '/tmp'
+    }
     stages {
         stage('Test') {
             steps {
