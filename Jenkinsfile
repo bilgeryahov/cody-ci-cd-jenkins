@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'cd ../class-library/ && dotnet build'
+                sh 'cd ./class-library/ && dotnet build'
             }
         }
     }
